@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ancymony z piątego</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            flex-direction: column;
+            text-align: center;
+        }
+        #content {
+            display: none;
+        }
+        .hidden {
+            display: none;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="passwordPrompt">
+            <h2>Podaj hasło:</h2>
+            <input type="password" id="passwordInput">
+            <button onclick="checkPassword()">OK</button>
+        </div>
+
+        <div id="content" class="hidden">
+            <h1>Ancymony z piątego</h1>
+            <p><a href="https://docs.google.com/document/d/16KHroE0MIEu4O1frUPpNjC4mu8AtWvpgG5d8k3557oo/edit?fbclid=IwY2xjawJLXUhleHRuA2FlbQIxMAABHWb0W1_lqk6AM9g3qafwdkSs1p8Y_gjMQBOjuJvP3P0poImwTcTbeFd16g_aem_c8n0r9M_7b8wBR9H_SMgmg&tab=t.0" target="_blank">EWIDENCJA CODZIENNA</a></p>
+            <p><a href="https://docs.google.com/document/d/1dMP-jlOWEg_s9LGJhQvgF3-eNy3Z1HWmdR8pfsbKCNI/edit?hl=pl&fbclid=IwY2xjawJLXZpleHRuA2FlbQIxMAABHXi_HyaX0LqTFfDMRHLdHwBnPTa6EDxNWuHr8hxzxV3TlCZEm1Cu08fS2Q_aem_J9zenp521h6z2ZWqnfpO4Q&tab=t.0" target="_blank">GDZIE NA KONSULTACJE</a></p>
+            <p><a href="https://docs.google.com/document/d/1Q0epMgP_lZn6CuNWMBgCJLBZTsUdgDjO5WaTOxy5KFA/edit?fbclid=IwY2xjawJLXZ5leHRuA2FlbQIxMAABHbbkz_gW4t6HjbAnY0sZX_-Y86dQD9DT3NPhlmU-QhlRmtID3eHiScwdGg_aem_XLCcbJ2jEzBmvn9O9zWegg&tab=t.0" target="_blank">GRAFIK I INNE</a></p>
+        </div>
+    </div>
+
+    <script>
+        function checkPassword() {
+            const password = document.getElementById('passwordInput').value;
+            if (password === "Szp2/25/7/997!") {
+                document.getElementById('passwordPrompt').style.display = 'none';
+                document.getElementById('content').style.display = 'block';
+            } else {
+                alert("Nieprawidłowe hasło!");
+            }
+        }
+    </script>
+</body>
+</html>
